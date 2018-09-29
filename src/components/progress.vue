@@ -98,11 +98,11 @@
       },
       startColor: {
         type: String,
-        default: "#398EE4"
+        default: "#398ee4"
       },
       endColor: {
         type: String,
-        default: "#2C5FC5"
+        default: "#2c5fc5"
       },
       linerId: {
         type: String
