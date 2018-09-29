@@ -108,7 +108,7 @@
         type: String
       },
       width: {
-        type: Number,
+        type: [Number,String],
         default: 126
       },
       reverse: {

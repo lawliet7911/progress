@@ -107,15 +107,15 @@
           <vm-progress type="circle" :percentage="percentage" style="vertical-align: middle;">占比{{percentage}}%
           </vm-progress>
           <vm-progress type="circle" :percentage="percentage" style="vertical-align: middle;"></vm-progress>
-          <vm-progress type="circle" :percentage="percentage" stroke-linecap="square" :start-color="'#ff6262'" :end-color="'#ff3d3d'" linerId="111" :stroke-width="18" style="vertical-align: middle;">
+          <vm-progress type="circle" :percentage="percentage" stroke-linecap="square" width="101" start-color="#ff6262" end-color="#ff3d3d" linerId="111" stroke-width="18" style="vertical-align: middle;">
             <span class="progress-label">剩余</span><br>
             <span style="color:#FFBA00;" class="progress-value">{{percentage}}天</span>
           </vm-progress>
-          <vm-progress type="circle" :percentage="percentage" stroke-linecap="square" linerId="222" :stroke-width="18" style="vertical-align: middle;">
+          <vm-progress type="circle" :percentage="percentage" stroke-linecap="square" linerId="222" stroke-width="18" style="vertical-align: middle;">
             <span class="progress-label">剩余</span><br>
             <span style="color:#FFBA00;" class="progress-value">{{percentage}}天</span>
           </vm-progress>
-          <vm-progress type="circle" :percentage="percentage" stroke-linecap="square" :start-color="'#ffe400'" :end-color="'#ffba00'" linerId="333" :stroke-width="18" style="vertical-align: middle;">
+          <vm-progress type="circle" :percentage="percentage" stroke-linecap="square" start-color="#ffe400" end-color="#ffba00" linerId="333" stroke-width="18" style="vertical-align: middle;">
             <span class="progress-label">剩余</span><br>
             <span style="color:#FFBA00;" class="progress-value">{{percentage}}天</span>
           </vm-progress>
