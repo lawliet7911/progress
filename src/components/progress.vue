@@ -17,10 +17,16 @@
     </div>
     <div class="vm-progress-circle" :style="{height: width + 'px', width: width + 'px'}" v-else>
       <svg viewBox="0 0 100 100">
+        <defs>
+          <linearGradient x1="0" y1="0" x2="1" y2="1" :id="linerId">
+            <stop offset="0%" :stop-color="startColor"></stop>
+            <stop offset="100%" :stop-color="endColor"></stop>
+          </linearGradient>
+        </defs>
         <path class="vm-progress-circle__track" :d="trackPath" :stroke="trackColor" :stroke-width="relativeStrokeWidth"
               fill="none"></path>
-        <path class="vm-progress-circle__path" :d="trackPath" :stroke-linecap="strokeLinecap" :stroke="stroke"
-              :stroke-width="relativeStrokeWidth" fill="none" :style="circlePathStyle"></path>
+        <path class="vm-progress-circle__path" :d="trackPath" :stroke-linecap="strokeLinecap" :stroke="linerUrl"
+              :stroke-width="relativeStrokeWidth" show-text="false" fill="none" :style="circlePathStyle"></path>
       </svg>
     </div>
     <div class="vm-progress__text"
@@ -90,6 +96,17 @@
           return ['success', 'exception', 'warning', 'info'].indexOf(val) > -1
         }
       },
+      startColor: {
+        type: String,
+        default: "#398EE4"
+      },
+      endColor: {
+        type: String,
+        default: "#2C5FC5"
+      },
+      linerId: {
+        type: String
+      },
       width: {
         type: Number,
         default: 126
@@ -122,6 +139,10 @@
     },
 
     computed: {
+      linerUrl() {
+        if (this.linerId) return "url('#" + this.linerId + "')";
+        else return this.stroke;
+      },
       barStyle () {
         let style = {}
         style.width = this.percentage + '%'

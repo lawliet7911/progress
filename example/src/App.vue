@@ -107,7 +107,10 @@
           <vm-progress type="circle" :percentage="percentage" style="vertical-align: middle;">占比{{percentage}}%
           </vm-progress>
           <vm-progress type="circle" :percentage="percentage" style="vertical-align: middle;"></vm-progress>
-          <vm-progress type="circle" :percentage="percentage" reverse style="vertical-align: middle;"></vm-progress>
+          <vm-progress type="circle" :percentage="percentage" :start-color="'#FFE400'" :end-color="'#FFBA00'" linerId="111" :stroke-width="18" style="vertical-align: middle;">
+            <span class="progress-label">剩余</span><br>
+            <span style="color:#FFBA00;" class="progress-value">{{percentage}}天</span>
+          </vm-progress>
           <vm-button-group>
             <vm-button type="default" @click="increase">增加</vm-button>
             <vm-button type="default" @click="decrease">减少</vm-button>
