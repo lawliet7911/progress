@@ -25,7 +25,8 @@
         </defs>
         <path class="vm-progress-circle__track" :d="trackPath" :stroke="trackColor" :stroke-width="relativeStrokeWidth"
               fill="none"></path>
-        <path class="vm-progress-circle__path" :d="trackPath" :stroke-linecap="strokeLinecap" :stroke="linerUrl"
+              <!-- :stroke-linecap="strokeLinecap" 去掉圆角 解决百分比显示到92+时 就满了的bug -->
+        <path class="vm-progress-circle__path" :d="trackPath" :stroke="linerUrl"
               :stroke-width="relativeStrokeWidth" show-text="false" fill="none" :style="circlePathStyle"></path>
       </svg>
     </div>

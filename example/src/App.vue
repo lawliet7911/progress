@@ -313,11 +313,11 @@
     methods: {
       increase () {
         if (this.percentage === 100) return
-        this.percentage = parseInt(this.percentage, 10) + 10
+        this.percentage = parseInt(this.percentage, 10) + 1
       },
       decrease () {
         if (this.percentage === 0) return
-        this.percentage = parseInt(this.percentage, 10) - 10
+        this.percentage = parseInt(this.percentage, 10) - 1
       }
     }
   }
